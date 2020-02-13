@@ -21,7 +21,9 @@ args = parser.parse_args()
 body_weight = int(args.weight)
 total_lifted = int(args.total)
 
-
+# do the calculation
 coeff = 500 / (A + B * body_weight + C * (body_weight**2) + D * (body_weight**3) + E * (body_weight**4) + F * (body_weight**5))
 score = round(total_lifted * coeff, 2) 
+
+# print out the score
 print(f'Your wilks score is: {score}')
